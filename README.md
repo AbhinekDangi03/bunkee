@@ -1,4 +1,4 @@
-# Nek-Portal
+# BUNKEE
 
 **A desktop attendance dashboard for GEHU students.**
 
