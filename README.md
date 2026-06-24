@@ -6,6 +6,8 @@ Logs into the college ERP, pulls your live attendance, and does the math
 you'd otherwise do in your head every morning — exactly how many classes
 you can skip (or need to attend) before you drop below 70% or 75%.
 
+Smash the ⭐ if bunkee fw you heavy.
+
 ## What it actually does
 - Auto-handles ERP login via a persistent browser session — no re-login every run
 - Per-subject breakdown: attended / conducted / live %
