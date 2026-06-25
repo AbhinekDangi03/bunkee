@@ -75,11 +75,43 @@ def main(page: ft.Page):
             
         threading.Thread(target=_th, daemon=True).start()
 
+    # ---- INDENTATION FIXED: Functions and Objects live in the main function scope ----
+    def open_github(e):
+        page.launch_url("https://github.com/AbhinekDangi03/bunkee")
+
+    oss_banner = ft.Container(
+        content=ft.Column([
+            ft.Text(
+                "This is an open source project and we are more than happy if you can contribute!",
+                size=12,
+                color="#888888",
+                text_align=ft.TextAlign.CENTER
+            ),
+            ft.TextButton(
+                text="Contribute on GitHub",
+                icon=ft.Icons.CODE,
+                icon_color="#C8F03C",
+                style=ft.ButtonStyle(color="#FFFFFF"),
+                on_click=open_github
+            )
+        ], alignment=ft.MainAxisAlignment.CENTER, horizontal_alignment=ft.CrossAxisAlignment.CENTER),
+        padding=15,
+        bgcolor="#0D0D0D",
+        border_radius=8,
+        border=ft.border.all(1, "#1A1A1A"),
+        width=400
+    )
+
     page.add(
         ft.Container(height=20),
         ft.Text("ATTENDANCE-PORTAL", size=45, weight="bold", color="#FFFFFF"),
         ft.Text("INTELLIGENT OPTIMIZATION SYSTEM", size=10, weight="bold", color="#444444"),
-        ft.Container(height=20),
+        ft.Container(height=10),
+        
+        # Injected banner here
+        oss_banner, 
+        
+        ft.Container(height=10),
         ft.ElevatedButton("SYNC WITH ERP", on_click=start_sync, bgcolor="#C8F03C", color="#000000", width=350, height=60),
         status, progress,
         ft.Divider(height=50, color="#1A1A1A"),
