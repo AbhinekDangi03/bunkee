@@ -8,6 +8,9 @@ you can skip (or need to attend) before you drop below 70% or 75%.
 
 Smash the ⭐ if bunkee fw you heavy.
 
+Want to contribute? 
+  redirect to the contribution tab.
+
 ## What it actually does
 - Auto-handles ERP login via a persistent browser session — no re-login every run
 - Per-subject breakdown: attended / conducted / live %
